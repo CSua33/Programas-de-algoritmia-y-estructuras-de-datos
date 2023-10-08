@@ -1,0 +1,30 @@
+# Project: Metodos_de_ordenamiento
+# Makefile created by Dev-C++ 5.0.0.4
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = 
+OBJ      = Metodos_de_ordenamiento.o $(RES)
+LINKOBJ  = Metodos_de_ordenamiento.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/lib" -L"C:/Program Files (x86)/Dev-Cpp/lib/gcc" -static-libstdc++ -static-libgcc  
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/include" 
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/include" 
+BIN      = Metodos_de_ordenamiento.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS   = $(INCS)  
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Metodos_de_ordenamiento.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Metodos_de_ordenamiento.exe" $(LIBS)
+
+Metodos_de_ordenamiento.o: Metodos_de_ordenamiento.cpp
+	$(CPP) -c Metodos_de_ordenamiento.cpp -o Metodos_de_ordenamiento.o $(CXXFLAGS)
